@@ -1,0 +1,421 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Jiggle keyframes */
+@keyframes jiggle {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2.5px);
+    }
+    50% {
+        transform: translateX(2.5px);
+    }
+    75% {
+        transform: translateX(-2.5px);
+    }
+}
+
+/* Scale up keyframes */
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .body-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+#pdf-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.pdf-page-container {
+    margin-top: 0;
+    margin-bottom: 0; /* Adjust this value to reduce/increase the gap */
+    text-align: center; /* Center the text */
+}
+
+.pdf-page-number {
+    margin-bottom: 5px; /* Add some space between the page number and the canvas */
+    font-weight: bold;
+    font-size: small;
+    margin-top: 0;
+}
+
+#pdf-container canvas {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; /* Center the canvas horizontally */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+  a.name {
+    font-size: 36px; /* Adjust as needed */
+    margin-top: 20px; /* Space between name and content below */
+    text-align: center; /* Aligns the name to the center */
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s;
+}
+
+a.name:hover {
+    transform: scale(1.05);
+}
+
+.email a {
+    text-decoration: none;
+    color: black;
+}
+
+  .dark-mode {
+      font-family: 'Montserrat', sans-serif;
+      justify-content: center;
+      background-color: #1f1f1f;
+      color: white;
+  }
+
+  span .loud, .loud {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    transition: transform 0.3s;
+}
+
+span .loud-noanim, .loud-noanim {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+
+span .loud:hover, .loud:hover{
+    transform: scale(1.05);
+}
+
+span .semi-loud, .semi-loud {
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+}
+
+span .quiet, .quiet {
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: center;
+    display: block;
+}
+
+span .bottom, .bottom {
+    margin-bottom: 0;
+}
+
+a.more {
+    color: #444;
+    text-decoration: none;
+}
+
+.left {
+    justify-content: left;
+    text-align: left;
+}
+
+.right {
+    justify-content: right;
+    padding-right: 15px;
+}
+
+.top {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.whitespace {
+    margin-top: 5%;
+}
+
+.name-container.dark-mode {
+    color: white;
+}
+
+.name-container.dark-mode a {
+    color: white;
+}
+
+  /* "menu" -> navbar */
+  .menu {
+    position: static;
+    font-weight: bold;
+    color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+  
+  .menu li {
+      float: left; 
+    }
+  
+  .menu a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+.git a {
+    text-decoration: none;
+}
+  
+  .menu a:hover {
+    background-color: #444;
+  }
+  
+  .leftmenu {
+  float: left; }
+  
+  .rightmenu {
+  float: right;
+}
+
+  
+  /*          */
+  
+
+  .project-container {
+    background-color: #ececec;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-container.dark-mode {
+    background-color: #333;
+}
+
+.project-container-noanim {
+    background-color: #ececec;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-container-noanim.dark-mode {
+    background-color: #333;
+}
+
+.project-container-noredir {
+    background-color: #ececec;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-container-noredir.dark-mode {
+    background-color: #333;
+}
+
+.old-project-container:hover {
+    background-color: #d3d3d3;
+    animation-name: jiggle;
+    animation-duration: 0.5s;
+}
+
+.project-container:hover, .project-container-noredir:hover{
+    background-color: #d3d3d3;
+    transform: scale(1.025);
+}
+
+.project-container.dark-mode:hover, .project-container-noredir.dark-mode:hover{
+    background-color: #555;
+}
+
+.project-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-container h2 {
+    font-size: 18px;
+    color: #888;
+}
+
+.project-description {
+    background-color: #eeeeee;
+    font-size: 16px;
+}
+
+
+.long {
+    display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tags {
+    text-align: left;
+    align-content: left;
+}
+
+.tag {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.tag.dark-mode {
+    color: black;
+}
+
+
+
+  body.dark-mode section a {
+    color: rgb(110, 175, 255);
+  }
+  
+
+
+
+  /* Footer styles */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    background-color: #333333;
+    color: white;
+    padding: 12px;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-left {
+    float: left;
+}
+
+.footer-right {
+    float: right;
+}
+
+.footer-right a {
+    margin-left: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    color: #aaa;
+}
+
+/* Toggle Button */
+.toggle {
+    display: inline-block;
+    position: relative;
+    width: 34px; /* Adjusted width to maintain the aspect ratio */
+    height: 18px; /* Adjusted height */
+    border-radius: 9px; /* Adjusted border-radius to match height */
+    overflow: hidden;
+    vertical-align: middle; /* Aligns with text */
+    margin-bottom: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 9px; /* Adjusted border-radius to match height */
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px; /* Adjusted height */
+    width: 14px; /* Adjusted width */
+    left: 2px; /* Adjusted positioning */
+    top: 2px; /* Adjusted positioning */
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    transform: translateX(0);
+}
+
+input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(16px); /* Adjusted translateX to match new width */
+}
+
+input[type="checkbox"]:checked + .slider {
+    background-color: #2196F3;
+}
+
+#cookie-notice {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    z-index: 1000;
+}
+#cookie-notice button {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0;
+    cursor: pointer;
+}
+#cookie-notice button:hover {
+    background-color: #45a049;
+}
